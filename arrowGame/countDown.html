@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Down</title>
+    <link rel="stylesheet" href="countdown.css">
+</head>
+<body>
+    <h1>Count Down</h1>
+    <p>rule: press a number on your Keybord to start Count Down</p>
+    <b id="countDown"> 0 </b>
+    
+    <script>
+        document.addEventListener('keydown',function(event){
+            const countDown = document.getElementById("countDown")
+            const music = new Audio("countZero.wav")
+
+
+            if(event.key >= '0' && event.key <= '9'){
+                var coundDownValue = parseInt(event.key) // הכנסו לתוך המשתנה את המספר שלחצת באתר 
+
+
+            }
+            function countdown(){
+                countDown.innerHTML = coundDownValue
+                if ( coundDownValue == 0){
+                    music.play()
+                    countDown.innerHTML = "Boooooom !"
+                }
+                else{
+                    coundDownValue = coundDownValue -1
+                    setTimeout(countdown,1000)
+                }
+            }
+            countdown() // קורא לפונקציה לפעול 
+
+
+        }
+    
+    
+    
+    )
+    </script>
+</body>
+</html>

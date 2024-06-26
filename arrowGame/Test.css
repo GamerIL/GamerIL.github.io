@@ -1,0 +1,13 @@
+body{
+    background-color:blanchedalmond
+}
+#bord{
+    margin-top: 200px;
+    text-align: center;
+    
+    justify-items: center;
+
+    color: blue;
+    width: 40px;
+    height: 40px;
+}
