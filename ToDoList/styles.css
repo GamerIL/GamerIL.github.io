@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 320px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.task-input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.task-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.task-input input:focus {
+    border-color: #9b59b6;
+    box-shadow: 0 0 5px rgba(155, 89, 182, 0.5);
+}
+
+.task-input button {
+    padding: 10px 15px;
+    background-color: #9b59b6;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.task-input button:hover {
+    background-color: #8e44ad;
+    transform: scale(1.05);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #f4f4f4;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+li span {
+    flex: 1;
+}
+
+li button {
+    margin-left: 10px;
+    background: transparent;
+    border: none;
+    color: #c0392b;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+}
+
+li button:hover {
+    color: #e74c3c;
+    transform: scale(1.1);
+}
+
+li .task-number {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+li .edit-btn {
+    color: #2980b9;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+li .edit-btn:hover {
+    color: #3498db;
+    transform: scale(1.1);
+}
